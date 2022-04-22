@@ -2,6 +2,8 @@
 
 ![toonft](https://user-images.githubusercontent.com/20431369/164615424-f3becc45-124e-47ca-a9db-9b28b9772608.png)
 
+---
+
 # 🎨 Toonft Template
 
 `Gulp v3.9.1` 과 `Bootstrap v4.6.1` 로 구축된 마켓플레이스 템플릿입니다.
