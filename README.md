@@ -22,3 +22,74 @@
 - Bootstrap V4.6.1
 - Browser Sync v2.26
 - Node sass v4.14
+
+## Prettier
+
+코드 포멧터 설정(.prettierrc)은 다음과 같습니다.
+
+```
+{
+  "editor.formatOnSave": true,
+  "prettier.semi": false,
+  "prettier.javascriptEnable": ["javascript", "javascriptreact"],
+  "prettier.printWidth": 200,
+  "prettier.useTabs": false,
+  "prettier.tabWidth": 2,
+  "prettier.bracketSameLine": true
+}
+```
+
+## 디자인 컴포넌트
+
+### 1. DROPDOWN
+
+<p align="middle">
+  <img src="https://user-images.githubusercontent.com/20431369/165225996-7d032813-1575-49ac-981d-21742d63500a.png">
+</p>
+
+```
+.dropdownToggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 200px;
+  padding: 0 10px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: #fff;
+  font-size: 16px;
+}
+.dropdown-menu {
+  min-width: 200px;
+  overflow: hidden;
+  padding: 0;
+  border-radius: 10px;
+  border-color: rgba(0, 0, 0, 0.9);
+}
+.dropdown-item {
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+
+  &:hover,
+  &:focus {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+  }
+
+  &:last-of-type {
+    border-bottom: 0;
+  }
+}
+
+.dropdown.show {
+  .dropdownToggle {
+    border-color: rgba(0, 0, 0, 0.9);
+  }
+  .arrow {
+    transform: rotate(180deg);
+  }
+}
+```
