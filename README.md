@@ -48,6 +48,45 @@
 </p>
 
 ```
+# HTML
+<div class="dropdown">
+	<button
+		class="dropdownToggle"
+		type="button"
+		data-toggle="dropdown"
+	>
+		<span>Recently Listed</span>
+		<svg
+			width="24"
+			height="24"
+			viewBox="0 0 24 24"
+			class="arrow"
+		>
+			<path
+				d="m7 10 5 5 5-5"
+				stroke="#000"
+				stroke-width="1.5"
+				fill="none"
+				fill-rule="evenodd"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+			/>
+		</svg>
+	</button>
+	<div class="dropdown-menu">
+		<button class="dropdown-item" type="button">
+			Recently Listed
+		</button>
+		<button class="dropdown-item" type="button">
+			Recently Created
+		</button>
+		<button class="dropdown-item" type="button">
+			Recently Sold
+		</button>
+	</div>
+</div>
+
+# SCSS
 .dropdownToggle {
   display: flex;
   align-items: center;
