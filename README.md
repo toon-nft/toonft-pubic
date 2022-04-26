@@ -43,7 +43,7 @@
 
 ### 1. DROPDOWN
 
-<p align="middle">
+<p>
   <img src="https://user-images.githubusercontent.com/20431369/165225996-7d032813-1575-49ac-981d-21742d63500a.png">
 </p>
 
