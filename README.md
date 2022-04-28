@@ -41,7 +41,7 @@
 
 ## 디자인 컴포넌트
 
-### 1. DROPDOWN
+### 1. 드롭다운
 
 <p>
   <img src="https://user-images.githubusercontent.com/20431369/165225996-7d032813-1575-49ac-981d-21742d63500a.png">
@@ -133,7 +133,7 @@
 }
 ```
 
-### 2. Btn
+### 2. 버튼
 
 <p>
 <img src="https://user-images.githubusercontent.com/20431369/165692350-dae11db6-5553-451d-a733-c77d1900f422.png">
