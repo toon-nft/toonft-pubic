@@ -132,3 +132,83 @@
   }
 }
 ```
+
+### 2. Btn
+
+<p>
+<img src="https://user-images.githubusercontent.com/20431369/165692350-dae11db6-5553-451d-a733-c77d1900f422.png">
+</p>
+
+버튼 사이즈 높이에 따라 `sm`,`md`,`lg`,`xl`,`xxl` 로 구분
+
+```
+# HTML
+<button type="button" class="btnPrimary btn-xxl">
+  Buy Now
+</button>
+<button type="button" class="btnOutlinePrimary btn-sm">
+  Make offer
+</button>
+
+# SCSS
+
+.btnOutlinePrimary {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  transition: all 0.2s ease;
+
+  &.active {
+    background-color: #000;
+    border-color: #000;
+    color: #fff;
+  }
+
+  &:hover:not(:disabled),
+  &:focus:not(:disabled) {
+    border-color: rgba(0, 0, 0, 0.9);
+  }
+
+  &:disabled {
+    background-color: #e9ecef;
+    border-color: rgba(0, 0, 0, 0.2);
+    cursor: not-allowed;
+  }
+}
+
+.btnPrimary {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #000;
+  background-color: #000;
+  transition: all 0.2s ease;
+  color: #fff;
+
+  &.active {
+    background-color: #ee312f;
+    border-color: #ee312f;
+    color: #fff;
+  }
+  &.active:hover:not(:disabled),
+  &.active:focus:not(:disabled) {
+    background-color: #ee312f;
+    border-color: #ee312f;
+    color: #fff;
+  }
+
+  &:hover:not(:disabled),
+  &:focus:not(:disabled) {
+    border: 1px solid lighten(#000, 15%);
+    background-color: lighten(#000, 15%);
+  }
+
+  &:disabled {
+    background-color: #e9ecef;
+    border-color: rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.15);
+    cursor: not-allowed;
+  }
+}
+
+```
