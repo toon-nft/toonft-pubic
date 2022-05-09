@@ -212,3 +212,85 @@
 }
 
 ```
+
+### 3. 인풋:라디오
+
+<p>
+<img src="https://user-images.githubusercontent.com/20431369/167344061-c3af3411-813b-4bcd-bb67-055b69b7ad99.png">
+</p>
+
+```
+#HTML
+<label className="radio">
+  <input type="radio" />
+  <span className="radioLabel">Buying NFTs</span>
+</label>
+<label className="radio">
+  <input type="radio" />
+  <span className="radioLabel">Selling NFTs</span>
+</label>
+<label className="radio">
+  <input type="radio" />
+  <span className="radioLabel">Account / Login issues</span>
+</label>
+<label className="radio">
+  <input type="radio" />
+  <span className="radioLabel">Wallet and Transaction Errors</span>
+</label>
+<label className="radio">
+  <input type="radio" />
+  <span className="radioLabel">Other Issues</span>
+</label>
+
+#SCSS
+.radio {
+  display: inline-block;
+  input[type="radio"] {
+    @include sr-only();
+  }
+
+  .radioLabel {
+    position: relative;
+    display: inline-block;
+    padding-left: 34px;
+    cursor: pointer;
+    font-size: 16px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -3px;
+      width: 24px;
+      height: 24px;
+      text-align: center;
+      background: #fff;
+      border: solid 1px rgba(0, 0, 0, 0.2);
+      border-radius: 100%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 7px;
+      width: 10px;
+      height: 10px;
+      background-color: rgba(0, 0, 0, 0.05);
+      border-radius: 100%;
+    }
+  }
+
+  input[type="radio"]:checked + .radioLabel {
+    &::before {
+      border: 2px solid #ee312f;
+    }
+    &::after {
+      background: #ee312f;
+    }
+  }
+}
+.radio:not(.d-block) + .radio:not(.d-block) {
+  margin-left: 20px;
+}
+```
