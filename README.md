@@ -294,3 +294,68 @@
   margin-left: 20px;
 }
 ```
+
+### 4. 로딩
+
+<p>
+<img src="https://user-images.githubusercontent.com/20431369/169003083-f015d18f-4245-4f55-989b-250d4e029ba0.png">
+</p>
+
+```
+#HTML
+<div class="followStep__progress followStep__progress--loading">
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M5 12.5 9.667 17 19 8"
+      stroke="#000"
+      stroke-width="1.5"
+      fill="none"
+      fill-rule="evenodd"
+      opacity=".2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+</div>
+
+#SCSS
+.followStep {
+  &__progress--loading {
+    svg {
+      display: none;
+    }
+  }
+  &__progress--loading::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    z-index: 1;
+    width: 34px;
+    height: 34px;
+    border: 3px solid transparent;
+    border-left-color: #ee312f;
+    border-radius: 50%;
+    animation-name: loadingRotate;
+    animation-duration: 1.2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes loadingRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+```
